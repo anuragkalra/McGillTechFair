@@ -1,0 +1,267 @@
+body{
+	font-family: Verdana;
+	margin:0px;
+	border:0px;
+	padding:0px;
+	background: linear-gradient(#FFFFFF, #C80000);
+}
+
+.col_half { width: 49%; }
+.col_third { width: 32%; }
+.col_fourth { width: 23.5%; }
+.col_fifth { width: 18.4%; }
+.col_sixth { width: 15%; }
+.col_three_fourth { width: 74.5%;}
+.col_twothird{ width: 66%;}
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth{
+	position: relative;
+	display:inline;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 20px;
+}
+.end { margin-right: 0 !important; }
+
+/*-=-=-=-=-=-=-=-=-=-=- */
+/* Flip Panel */
+/*-=-=-=-=-=-=-=-=-=-=- */
+
+.wrapper{ width: 980px; margin: 0 auto;  background-color: #bdd3de; hoverflow: hidden;}
+
+.panel {
+	margin: 0 auto;
+	height: 130px;  
+	position: relative;
+	-webkit-perspective: 600px;
+	-moz-perspective: 600px;
+}
+
+.panel .front,
+.panel .back {
+	text-align: center;
+}
+	
+.panel .front {
+	height: inherit;
+	position: absolute;
+	top: 100;
+	z-index: 900;
+	text-align: center;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	   -moz-transform: rotateX(0deg) rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+
+.panel .back {
+	height: inherit;
+	position: absolute;
+	top: 1000;
+	z-index: 1000;
+	-webkit-transform: rotateY(-180deg);
+	   -moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	   -moz-transform-style: preserve-3d;
+	-webkit-backface-visibility: hidden;
+	   -moz-backface-visibility: hidden;
+	-webkit-transition: all .4s ease-in-out;
+	   -moz-transition: all .4s ease-in-out;
+		-ms-transition: all .4s ease-in-out;
+		 -o-transition: all .4s ease-in-out;
+			transition: all .4s ease-in-out;
+}
+.panel.flip .front {
+	z-index: 900;
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+.panel.flip .back {
+	z-index: 1000;
+	-webkit-transform: rotateX(0deg) rotateY(0deg);
+	-moz-transform: rotateX(0deg) rotateY(0deg);
+}
+.box1{
+	opacity: 0.7;
+	background-color: red;
+	margin: 0 auto;
+	padding: 0px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+		border: solid;
+
+}
+.box2{
+
+	opacity: 0.7;
+	background-color: white;
+	margin: 0 auto;
+	padding: 0px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+		border: solid;
+
+
+}
+section{
+	margin:0px;
+	border:0px;
+	min-height: 100vh;
+}
+
+.first_page{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	align-content: center;
+	align-items: center;
+}
+
+.first_page_image{
+	display: block;
+	width: 600px;
+	height: 600px;
+	padding: 5px 20px;
+	border-radius: 25%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.first_page_buttons_div {
+	align-content: center;
+	align-items: center;
+}
+
+.first_page_buttons {
+	display: inline-block;
+	width: 22.5%;
+	border: solid;
+	border-width: 4px;
+	border-color: rgb(180,180,180);
+	border-radius: 10px;
+	padding: 25px;
+	background-color: rgb(200, 0, 0);
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	margin-top: ;
+}
+
+.button1{
+	display: inline;
+	float: left;
+	margin-left: 20%;
+}
+
+.button2{
+	display: inline;
+	float: left;
+	margin-left: 5%; 
+}
+
+.first_page_buttons:hover{
+	background-color: purple;
+	color: white;
+}
+
+#Home_page_line{
+	clear: both;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+
+.menu_mobile_handle{
+	display: none;
+	float: right;	
+	margin-top: 20px;
+}
+
+.menu_mobile_handle div{
+	border: solid;
+	border-width: 2px 0px 0px 0px;
+	border-color: black;
+	width: 50px;
+	margin-bottom: 3px;
+}
+
+.navbar{
+	background-color: #C80000;
+	display: block;
+	width:100%;
+	text-align: center;
+	position: fixed;
+}
+
+.navbar ul{
+	display: inline-block;
+	list-style-type: none;
+	width: 75%;
+}
+
+.navbar ul li {
+	display: inline-block;
+}
+
+.navbar ul li a{
+	padding: 15px 35px;
+	color: white;
+	text-decoration: none;
+}
+
+.navbar ul li a:hover{
+	background-color: purple;
+	color: white;
+	opacity: 1;
+}
+
+.navbar ul li a:active{
+	background-color: purple;
+	color: red;
+}
+
+#About_Us{
+	
+}
+
+#Students_Alumni{
+	
+}
+
+#Employers{
+
+}
+
+#Contact_Us{
+
+}
+
+
+@media screen and (max-width:814px) {
+	.menu_mobile_handle{
+	display: block;
+	float: right;	
+	margin-top: 20px;
+}
+
+.menu_mobile_handle div{
+	border: solid;
+	border-width: 2px 0px 0px 0px;
+	border-color: black;
+	width: 50px;
+	margin-bottom: 3px;
+}
